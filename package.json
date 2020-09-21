@@ -12,6 +12,7 @@
     "axios": "^0.19.2",
     "body-parser-xml": "^2.0.0",
     "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.0",
     "express": "^4.17.1"
   }
 }

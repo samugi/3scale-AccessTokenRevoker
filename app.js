@@ -13,7 +13,7 @@ require('body-parser-xml')(bodyParser);
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
-if(options.url == ""){
+if(options.url == undefined){
   console.log("Please provide a value for the API manager url")
   return;
 }

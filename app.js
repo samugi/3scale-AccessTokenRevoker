@@ -2,19 +2,38 @@ var express = require('express');
 var bodyParser = require('body-parser');
 const axios = require('axios');
 const commandLineArgs = require('command-line-args')
+const commandLineUsage = require('command-line-usage')
 
 //commandline argument provides API Manager URL
 const optionDefinitions = [
-  { name: 'url', alias: 'u', type: String }
+  { name: 'url', alias: 'u', type: String },
+  { name: 'help', alias: 'h', type: Boolean }
 ]
+
+const sections = [{
+    header: 'Options',
+    optionList: [
+      {
+        name: 'url',
+	alias: 'u',
+        description: 'The API manager url.'
+      },
+      {
+        name: 'help',
+	alias: 'h',
+        description: 'Print this usage guide.'
+      }
+    ]
+  }]
+
 const options = commandLineArgs(optionDefinitions)
 
 require('body-parser-xml')(bodyParser);
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
-if(options.url == undefined){
-  console.log("Please provide a value for the API manager url")
+if(options.url == undefined || options.help){
+  console.log(commandLineUsage(sections))
   return;
 }
 

@@ -16,7 +16,7 @@ const sections = [{
       {
         name: 'url',
 	alias: 'u',
-        description: 'The API manager url.'
+        description: 'The API manager url. Must include protocol {http|https}://'
       },
       {
         name: 'help',

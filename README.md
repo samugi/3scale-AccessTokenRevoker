@@ -6,7 +6,7 @@ Access Token Revoker (ATR) is meant to be included in a workflow to obtain singl
 ATR will read the token (`token_value`) from the Application's extra_fields and revoke it via the 3scale API endpoint `DELETE /admin/api/personal/access_tokens/token_value.json`.
 
 ## Install
-Download the zip content or perform a `git clone https://github.com/samu91gn/3scale-AccessTokenRevoker.git`
+Download the zip content or perform a `git clone https://github.com/samugi/3scale-AccessTokenRevoker.git`
 
 `npm install`
 

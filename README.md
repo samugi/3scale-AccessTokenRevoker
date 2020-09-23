@@ -11,5 +11,5 @@ Download the zip content or perform a `git clone https://github.com/samugi/3scal
 `npm install`
 
 ## Deploy
-`cd` into the *3scale-AccessTokenRevoker* repository.
+`cd` into the *3scale-AccessTokenRevoker* repository.  
 `node ./app.js -u https://{3SCALE-TENANT-NAME}-admin.{WILDCARD-DOMAIN|3scale.net}`
